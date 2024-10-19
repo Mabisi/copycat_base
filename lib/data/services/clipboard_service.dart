@@ -18,7 +18,7 @@ import "package:path/path.dart" as p;
 import 'package:rxdart/rxdart.dart';
 import 'package:super_clipboard/super_clipboard.dart';
 import "package:universal_io/io.dart";
-import 'package:window_manager/window_manager.dart';
+import 'package:window_manager_plus/window_manager_plus.dart';
 
 class ClipItem {
   final ClipItemType type;
@@ -791,7 +791,7 @@ class CopyToClipboard {
     );
 
     if (isDesktopPlatform) {
-      windowManager.show();
+      WindowManagerPlus.current.show();
     }
 
     if (outputFile == null) return false;
